@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // 🚨 Get input values
       const studentNameInput = document.getElementById('studentName');
-      const personalMessageInput = ;
+      const personalMessageInput = document.getElementById('personalMessage');
       const courseNameInput = ; 
   
       const studentName = studentNameInput.value;
