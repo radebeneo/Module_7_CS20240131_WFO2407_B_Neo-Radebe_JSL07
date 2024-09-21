@@ -18,16 +18,22 @@ document.addEventListener('DOMContentLoaded', function () {
       const studentName = studentNameInput.value.trim();
       const personalMessage = personalMessageInput.value.trim();
       const courseName = courseNameInput ? courseNameInput.value.trim().t : "a course"; // Fallback to "a course" if no input
-  
+      
+      //Validate fields
       if (studentName.trim() === '' || personalMessage.trim() === '') {
         alert('Please fill in all fields');
         return;
       }
   
       // 🚨 Generate certificate content dynamically
-      certificateContent. = `
+      certificateContent.innerHTML = `
+      <h2>Certificate of Achievement</h2>
+      <p>This certificate is proudly presented to</p>
       <h3>${studentName}</h3>
-    `;
+      <p>for successfully completing</p>
+      <h4>${courseName}</h4>
+      <p>"${personalMessage}"</p>
+      <p>Congratulations on your achievement!</p>`;
     
       //  Display the modal
       modal.style.display = 'block';
